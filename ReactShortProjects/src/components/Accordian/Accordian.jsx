@@ -4,16 +4,24 @@ import data from "./data";
 
 export default function Accordian() {
 	const [selected, setSelected] = useState(null);
+
+	function handleSingleSelection(getCurrentId) {
+		setSelected(getCurrentId === selected ? null : getCurrentId);
+	}
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.accordian}>
 				{data && data.length > 0 ? (
 					data.map((dataItem) => (
 						<div key={dataItem.id} className={styles.item}>
-							<div className={styles.title}>
+							<div
+								onClick={() => handleSingleSelection(dataItem.id)}
+								className={styles.title}
+							>
 								<h3>{dataItem.question}</h3>
 								<span>+</span>
 							</div>
+							{selected === dataItem.id ? <div className={styles.answer}>{dataItem.answer}</div> : null}
 						</div>
 					))
 				) : (
