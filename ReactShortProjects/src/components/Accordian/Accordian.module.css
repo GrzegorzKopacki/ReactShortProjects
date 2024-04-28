@@ -4,6 +4,8 @@
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .accordian {
@@ -31,4 +33,17 @@
 
 .answer {
 	color: #fff;
+}
+
+.MultiSelectionButton {
+	padding: 10px 20px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #614101;
+	}
 }
