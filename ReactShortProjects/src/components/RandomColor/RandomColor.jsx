@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./RandomColor.module.css";
 
 export default function RandomColor() {
@@ -23,8 +23,13 @@ export default function RandomColor() {
 		const g = randomColorUtility(256);
 		const b = randomColorUtility(256);
 
-		setColor(`rgb${r},${g},${b}`);
+		setColor(`rgb(${r},${g},${b})`);
 	}
+
+	useEffect(() => {
+		if (typeOfColor === "rgb") handleCreateRandomRgbColor();
+		else handleCreateRandomHexColor;
+	}, [typeOfColor]);
 
 	return (
 		<div
@@ -47,7 +52,7 @@ export default function RandomColor() {
 				Generate Random Color
 			</button>
 			<div className={styles.heading}>
-				<h3>{typeOfColor}</h3>
+				<h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3>
 				<h1>{color}</h1>
 			</div>
 		</div>
