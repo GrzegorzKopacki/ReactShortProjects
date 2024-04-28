@@ -1,14 +1,12 @@
-
-import './App.css'
+import "./App.css";
+import Accordian from "./components/Accordian/Accordian";
 
 function App() {
-  
-
-  return (
-    <>
-      
-    </>
-  )
+	return (
+		<>
+			<Accordian />
+		</>
+	);
 }
 
-export default App
+export default App;
