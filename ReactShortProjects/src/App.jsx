@@ -1,7 +1,7 @@
 import "./App.css";
 import Accordian from "./components/Accordian/Accordian";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
-import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
+import LoadMoreData from "./components/LoadMoreData/LoadMoreData";
 import RandomColor from "./components/RandomColor/RandomColor";
 import StarRating from "./components/StarRating/StarRating";
 
@@ -16,7 +16,7 @@ function App() {
 				page={"1"}
 				limit={"10"}
 			/> */}
-			<LoadMoreBtn />
+			<LoadMoreData />
 		</>
 	);
 }
