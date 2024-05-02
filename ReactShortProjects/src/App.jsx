@@ -16,7 +16,7 @@ function App() {
 				page={"1"}
 				limit={"10"}
 			/> */}
-			<LoadMoreData />
+			{/* <LoadMoreData /> */}
 		</>
 	);
 }
