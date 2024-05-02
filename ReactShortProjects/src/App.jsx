@@ -5,6 +5,7 @@ import LoadMoreData from "./components/LoadMoreData/LoadMoreData";
 import RandomColor from "./components/RandomColor/RandomColor";
 import StarRating from "./components/StarRating/StarRating";
 import TreeView from "./components/TreeView/TreeView";
+import menus from "./components/TreeView/data";
 
 function App() {
 	return (
@@ -18,7 +19,7 @@ function App() {
 				limit={"10"}
 			/> */}
 			{/* <LoadMoreData /> */}
-			<TreeView/>
+			<TreeView menus={menus} />
 		</>
 	);
 }
