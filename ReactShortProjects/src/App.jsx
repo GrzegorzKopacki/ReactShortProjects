@@ -21,7 +21,7 @@ function App() {
 			/> */}
 			{/* <LoadMoreData /> */}
 			{/* <TreeView menus={menus} /> */}
-			<QrCodeGenerator />
+			{/* <QrCodeGenerator /> */}
 		</>
 	);
 }
