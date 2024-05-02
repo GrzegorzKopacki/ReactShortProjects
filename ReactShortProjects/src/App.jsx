@@ -4,6 +4,7 @@ import ImageSlider from "./components/ImageSlider/ImageSlider";
 import LoadMoreData from "./components/LoadMoreData/LoadMoreData";
 import RandomColor from "./components/RandomColor/RandomColor";
 import StarRating from "./components/StarRating/StarRating";
+import TreeView from "./components/TreeView/TreeView";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				limit={"10"}
 			/> */}
 			{/* <LoadMoreData /> */}
+			<TreeView/>
 		</>
 	);
 }
