@@ -5,6 +5,7 @@ import LightAndDarkMode from "./components/LightAndDarkMode/LightAndDarkMode";
 import LoadMoreData from "./components/LoadMoreData/LoadMoreData";
 import QrCodeGenerator from "./components/QrCodeGenerator/QrCodeGenerator";
 import RandomColor from "./components/RandomColor/RandomColor";
+import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
 import StarRating from "./components/StarRating/StarRating";
 import TreeView from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
@@ -23,7 +24,8 @@ function App() {
 			{/* <LoadMoreData /> */}
 			{/* <TreeView menus={menus} /> */}
 			{/* <QrCodeGenerator /> */}
-			<LightAndDarkMode/>
+			{/* <LightAndDarkMode/> */}
+			<ScrollIndicator />
 		</>
 	);
 }
