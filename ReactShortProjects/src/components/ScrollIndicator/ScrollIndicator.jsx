@@ -46,9 +46,26 @@ export default function ScrollIndicator({ url }) {
 		};
 	}, []);
 
+	if (errorMessage) {
+		return <div>Error {errorMessage}</div>;
+	}
+
+	if (loading) {
+		return <div>Loading data, please wait</div>;
+	}
+
 	return (
 		<div>
-			<h1>Custom Scroll Indicator</h1>
+			<div className={styles.topContainer}>
+				<h1>Custom Scroll Indicator</h1>
+				<div className={styles.scrollProgress}>
+					<div
+						className={styles.currentProgress}
+						style={{ width: `${scrollPercentage}%` }}
+					></div>
+				</div>
+			</div>
+
 			<div className="data-container">
 				{data && data.length > 0
 					? data.map((dataItem) => <p>{dataItem.title}</p>)
