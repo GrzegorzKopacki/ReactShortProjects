@@ -4,7 +4,7 @@
 	z-index: 1;
 	width: 100%;
 	text-align: center;
-	background-color: #0000;
+	background-color: rgb(154, 148, 239);
 }
 .scrollProgress {
 	width: 100%;
@@ -16,4 +16,8 @@
 	height: 10px;
 	background: #8b02b5;
 	width: 0%;
+}
+
+.dataContainer {
+	margin-top: 100px;
 }
