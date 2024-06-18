@@ -5,6 +5,7 @@ export default function ScrollIndicator({ url }) {
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
+	const [scrollPercentage, setScrollPercentage] = useState(0);
 
 	async function fetchData(getUrl) {
 		try {
@@ -25,6 +26,26 @@ export default function ScrollIndicator({ url }) {
 	useEffect(() => {
 		fetchData(url);
 	}, [url]);
+
+	function handleScrollPercentage() {
+		const howMuchScrolled =
+			document.body.scrollTop || document.documentElement.scrollTop;
+
+		const height =
+			document.documentElement.scrollHeight -
+			document.documentElement.clientHeight;
+
+		setScrollPercentage((howMuchScrolled / height) * 100);
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScrollPercentage);
+
+		return () => {
+			window.removeEventListener("scroll", () => {});
+		};
+	}, []);
+
 	return (
 		<div>
 			<h1>Custom Scroll Indicator</h1>
