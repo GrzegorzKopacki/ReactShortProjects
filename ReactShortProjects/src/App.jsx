@@ -25,7 +25,7 @@ function App() {
 			{/* <TreeView menus={menus} /> */}
 			{/* <QrCodeGenerator /> */}
 			{/* <LightAndDarkMode/> */}
-			<ScrollIndicator />
+			<ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
 		</>
 	);
 }

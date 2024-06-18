@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ScrollIndicator.module.css";
 
 export default function ScrollIndicator({ url }) {
@@ -11,6 +11,11 @@ export default function ScrollIndicator({ url }) {
 			setLoading(true);
 			const response = await fetch(getUrl);
 			const data = await response.json();
+
+			if (data && data.products && data.products.length > 0) {
+				setData(data.products);
+				setLoading(false);
+			}
 		} catch (e) {
 			console.log(e);
 			setErrorMessage(e.message);
@@ -20,5 +25,14 @@ export default function ScrollIndicator({ url }) {
 	useEffect(() => {
 		fetchData(url);
 	}, [url]);
-	return <div></div>;
+	return (
+		<div>
+			<h1>Custom Scroll Indicator</h1>
+			<div className="data-container">
+				{data && data.length > 0
+					? data.map((dataItem) => <p>{dataItem.title}</p>)
+					: null}
+			</div>
+		</div>
+	);
 }
