@@ -9,10 +9,11 @@ import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
 import StarRating from "./components/StarRating/StarRating";
 import TreeView from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
+import TabTest from "./components/custom-tabs/tab-test";
 
 function App() {
 	return (
-		<>
+		<div className="App">
 			{/* <Accordian /> */}
 			{/* <RandomColor /> */}
 			{/* <StarRating numberOfStars={10} /> */}
@@ -26,7 +27,8 @@ function App() {
 			{/* <QrCodeGenerator /> */}
 			{/* <LightAndDarkMode/> */}
 			{/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
-		</>
+			<TabTest />
+		</div>
 	);
 }
 
