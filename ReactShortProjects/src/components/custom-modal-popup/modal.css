@@ -18,3 +18,26 @@
 	border: 1px solid red;
 	width: 80%;
 }
+
+.close-modal-icon {
+	cursor: pointer;
+	font-size: 40px;
+	float: right;
+	font-weight: bold;
+}
+
+.header {
+	padding: 4px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+.body {
+	padding: 2px 15px;
+    height: 140px;
+}
+
+.footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+}
