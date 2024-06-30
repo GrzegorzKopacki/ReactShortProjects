@@ -7,7 +7,7 @@ export default function GithubProfileFinder() {
 					type="text"
 					placeholder="Search Github Username..."
 				/>
-				<button>Searh</button>
+				<button>Search</button>
 			</div>
 		</div>
 	);
