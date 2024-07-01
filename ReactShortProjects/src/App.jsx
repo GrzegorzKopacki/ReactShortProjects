@@ -11,6 +11,7 @@ import TreeView from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
 import ModalTest from "./components/custom-modal-popup/modal-test";
 import TabTest from "./components/custom-tabs/tab-test";
+import GithubProfileFinder from "./components/github-profile-finder";
 
 function App() {
 	return (
@@ -29,7 +30,8 @@ function App() {
 			{/* <LightAndDarkMode/> */}
 			{/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
 			{/* <TabTest /> */}
-			<ModalTest/>
+			{/* <ModalTest/> */}
+			<GithubProfileFinder />
 		</div>
 	);
 }
