@@ -27,3 +27,15 @@
 	color: black;
 	cursor: pointer;
 }
+
+.user {
+	padding: 15px;
+	border-radius: 10px;
+    border: 1px solid;
+}
+
+.avatar {
+	height: 150px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+}
