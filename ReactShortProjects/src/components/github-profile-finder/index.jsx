@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { TbArrowWaveLeftDown } from "react-icons/tb";
+import User from "./user";
 
 export default function GithubProfileFinder() {
 	const [userName, setUserName] = useState("GrzegorzKopacki");
@@ -13,12 +14,15 @@ export default function GithubProfileFinder() {
 		if (data) {
 			setUserData(data);
 			setLoading(false);
+			setUserName("");
 		}
 
 		console.log(data);
 	}
 
-	function handleSubmit() {}
+	function handleSubmit() {
+		fetchGitHubUserData();
+	}
 	useEffect(() => {
 		fetchGitHubUserData();
 	}, []);
@@ -39,6 +43,8 @@ export default function GithubProfileFinder() {
 				/>
 				<button onClick={handleSubmit}>Search</button>
 			</div>
+
+			{userData !== null ? <User user={userData} /> : null}
 		</div>
 	);
 }
