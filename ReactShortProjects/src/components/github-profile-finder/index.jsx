@@ -3,20 +3,29 @@ import { TbArrowWaveLeftDown } from "react-icons/tb";
 
 export default function GithubProfileFinder() {
 	const [userName, setUserName] = useState("GrzegorzKopacki");
+	const [userData, setUserData] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	async function fetchGitHubUserData() {
 		const res = await fetch(`https://api.github.com/users/${userName}`);
 
-        const data = await res.json()
+		const data = await res.json();
+		if (data) {
+			setUserData(data);
+			setLoading(false);
+		}
 
-        console.log(data)
+		console.log(data);
 	}
 
+	function handleSubmit() {}
 	useEffect(() => {
 		fetchGitHubUserData();
 	}, []);
 
-	function handleSubmit() {}
+	if (loading) {
+		return <h1>Loading data please wait</h1>;
+	}
 
 	return (
 		<div className="github-profile-container">
