@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { TbArrowWaveLeftDown } from "react-icons/tb";
 import User from "./user";
+import "./styles.css"
 
 export default function GithubProfileFinder() {
 	const [userName, setUserName] = useState("GrzegorzKopacki");
@@ -16,8 +17,6 @@ export default function GithubProfileFinder() {
 			setLoading(false);
 			setUserName("");
 		}
-
-		console.log(data);
 	}
 
 	function handleSubmit() {
