@@ -6,6 +6,7 @@ import LoadMoreData from "./components/LoadMoreData/LoadMoreData";
 import QrCodeGenerator from "./components/QrCodeGenerator/QrCodeGenerator";
 import RandomColor from "./components/RandomColor/RandomColor";
 import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
+import SearchAutocomplete from "./components/SearchBarWithApi";
 import StarRating from "./components/StarRating/StarRating";
 import TreeView from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
@@ -31,7 +32,8 @@ function App() {
 			{/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
 			{/* <TabTest /> */}
 			{/* <ModalTest/> */}
-			<GithubProfileFinder />
+			{/* <GithubProfileFinder /> */}
+			<SearchAutocomplete/>
 		</div>
 	);
 }
