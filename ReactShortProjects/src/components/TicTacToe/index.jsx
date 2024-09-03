@@ -1,5 +1,7 @@
+import "./style.css";
+
 function Square({ value }) {
-	return <button>{value}</button>;
+	return <button className="square">{value}</button>;
 }
 
 export default function TicTacToe() {
