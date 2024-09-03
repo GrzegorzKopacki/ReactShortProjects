@@ -8,7 +8,7 @@ import RandomColor from "./components/RandomColor/RandomColor";
 import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
 import SearchAutocomplete from "./components/SearchBarWithApi";
 import StarRating from "./components/StarRating/StarRating";
-import { TicTacToe } from "./components/TicTacToe/TicTacToe";
+import { TicTacToe } from "./components/TicTacToe";
 import TreeView from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
 import ModalTest from "./components/custom-modal-popup/modal-test";
