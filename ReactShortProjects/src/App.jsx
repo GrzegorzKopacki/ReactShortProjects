@@ -13,6 +13,8 @@ import TreeView from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
 import ModalTest from "./components/custom-modal-popup/modal-test";
 import TabTest from "./components/custom-tabs/tab-test";
+import FeatureFlags from "./components/feature-flag";
+import FeatureFlagGlobalState from "./components/feature-flag/context";
 import GithubProfileFinder from "./components/github-profile-finder";
 
 function App() {
@@ -36,7 +38,9 @@ function App() {
 			{/* <GithubProfileFinder /> */}
 			{/* <SearchAutocomplete/> */}
 			{/* <TicTacToe/> */}
-			
+			<FeatureFlagGlobalState>
+				<FeatureFlags />
+			</FeatureFlagGlobalState>
 		</div>
 	);
 }
