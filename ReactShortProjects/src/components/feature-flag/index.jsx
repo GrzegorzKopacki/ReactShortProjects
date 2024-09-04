@@ -7,9 +7,7 @@ import TreeView from "../TreeView/TreeView";
 import { FeatureFlagsContext } from "./context";
 
 export default function FeatureFlags() {
-
-    const {loading, enabledFlags} = useContext(FeatureFlagsContext)
-
+	const { loading, enabledFlags } = useContext(FeatureFlagsContext);
 
 	const componentsToRender = [
 		{
@@ -34,9 +32,18 @@ export default function FeatureFlags() {
 		},
 	];
 
+	function checkEnabledFlags(getCurrentKey) {
+		return enabledFlags[getCurrentKey];
+	}
+
+	if (loading) return <h1>Loading data, plase wait</h1>;
+
 	return (
 		<div>
 			<h1>Feature Flag</h1>
+			{componentsToRender.map((componentItem) =>
+				checkEnabledFlags(componentItem.key) ? componentItem.component : null
+			)}
 		</div>
 	);
 }
