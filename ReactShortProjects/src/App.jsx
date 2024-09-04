@@ -35,7 +35,7 @@ function App() {
 			{/* <ModalTest/> */}
 			{/* <GithubProfileFinder /> */}
 			{/* <SearchAutocomplete/> */}
-			<TicTacToe/>
+			{/* <TicTacToe/> */}
 			
 		</div>
 	);
